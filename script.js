@@ -12,7 +12,7 @@ document.getElementById('rsvpForm').onsubmit = (e) => {
 
 // TIMER
 function startTimer() {
-    const target = new Date("June 20, 2026 18:00:00").getTime();
+    const target = new Date("January 18, 2026 18:00:00").getTime();
     setInterval(() => {
         const diff = target - new Date().getTime();
         const d = Math.floor(diff / (1000 * 60 * 60 * 24));
