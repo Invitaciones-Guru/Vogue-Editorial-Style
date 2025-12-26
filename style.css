@@ -1,0 +1,271 @@
+:root {
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --gray: #f4f4f4;
+    --gold: #c5a059; /* Un tono dorado sutil para destacar */
+}
+
+body { margin: 0; font-family: 'Montserrat', sans-serif; background: var(--white); color: var(--black); }
+
+/* Todas las fotos Blanco y Negro Alto Contraste */
+img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.1); }
+
+/* Hero Split */
+.hero-split { display: grid; grid-template-columns: 1.2fr 0.8fr; height: 100vh; background: var(--gray); }
+.vertical-title { height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; letter-spacing: 15px; }
+.vertical-title h1 { font-family: 'Bodoni Moda', serif; font-size: 4rem; margin: 20px 0; writing-mode: vertical-rl; transform: rotate(180deg); }
+
+/* Mural de Eventos */
+.event-mural { padding: 100px 0; }
+.mural-row { display: grid; grid-template-columns: 1fr 1fr; align-items: center; margin-bottom: 80px; }
+.mural-row.reverse { direction: rtl; }
+.mural-row.reverse .mural-text-box { direction: ltr; }
+.mural-text-box { padding: 60px; text-align: left; }
+.event-num { font-size: 5rem; font-family: 'Bodoni Moda', serif; opacity: 0.1; position: absolute; margin-top: -40px; }
+.mural-text-box h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 10px; }
+.btn-underline { text-decoration: none; color: var(--black); border-bottom: 2px solid var(--black); padding-bottom: 5px; font-weight: 600; font-size: 0.8rem; letter-spacing: 3px; }
+
+/* RSVP NOIR (Inspirado en tu imagen pero con estilo propio) */
+.rsvp-noir { background: var(--black); color: var(--white); padding: 120px 20px; text-align: center; }
+.rsvp-container { max-width: 500px; margin: 0 auto; }
+.rsvp-title { font-family: 'Bodoni Moda', serif; font-size: 4rem; letter-spacing: 15px; margin-bottom: 10px; }
+.rsvp-subtitle { font-weight: 100; letter-spacing: 3px; margin-bottom: 50px; color: #888; }
+
+.noir-form { display: flex; flex-direction: column; gap: 40px; }
+.noir-form input, .noir-form select {
+    background: transparent; border: none; border-bottom: 1px solid #333; color: var(--white);
+    padding: 15px 0; font-family: 'Montserrat'; font-size: 1rem; letter-spacing: 2px; outline: none; transition: 0.3s;
+}
+.noir-form input:focus { border-bottom: 1px solid var(--white); }
+
+.btn-gold { 
+    background: var(--white); color: var(--black); border: none; padding: 20px; 
+    font-weight: 600; letter-spacing: 4px; cursor: pointer; transition: 0.4s;
+}
+.btn-gold:hover { background: var(--gold); color: var(--white); }
+.adults-only { margin-top: 40px; font-size: 0.6rem; letter-spacing: 5px; color: #555; }
+
+/* Timer */
+.clock-display { display: flex; justify-content: center; gap: 30px; font-family: 'Bodoni Moda', serif; font-size: 2.5rem; }
+
+
+
+/* DISEÑO PADRES LUXURY */
+/* --- DISEÑO PADRES Y MENSAJE --- */
+/* --- PADRES SIMETRÍA EDITORIAL --- */
+.wedding-message-vogue { 
+    padding: 100px 20px; 
+    background: #fff; 
+    text-align: center;
+}
+
+.parents-editorial-grid { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 40px; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+.family-unit { flex: 1; }
+
+/* Alineación hacia el centro */
+.right-align { text-align: right; }
+.left-align { text-align: left; }
+
+.family-label { 
+    font-size: 0.6rem; 
+    letter-spacing: 4px; 
+    color: #aaa; 
+    margin-bottom: 15px; 
+    display: block; 
+}
+
+.parent-name { 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 300; 
+    font-size: 1.1rem; 
+    letter-spacing: 1px; 
+    margin: 5px 0; 
+    color: #1a1a1a;
+}
+
+.vertical-divider { 
+    width: 1px; 
+    height: 80px; 
+    background: #eee; 
+}
+
+/* Ajuste para celulares: centramos todo para que sea legible */
+@media (max-width: 768px) {
+    .parents-editorial-grid { 
+        flex-direction: column; 
+        gap: 30px; 
+    }
+    .right-align, .left-align { 
+        text-align: center; 
+    }
+    .vertical-divider { 
+        width: 40px; 
+        height: 1px; 
+    }
+}
+
+/* Estilo del Mensaje Central (Mantenlo si ya lo tenías) */
+.message-wrapper { max-width: 550px; margin: 0 auto 60px; }
+.ampersand-bg { 
+    font-family: 'Bodoni Moda', serif; 
+    font-size: 7rem; 
+    color: #f9f9f9; 
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 0; 
+    margin-top: -30px;
+}
+.main-wedding-quote { 
+    position: relative; 
+    z-index: 1; 
+    font-family: 'Playfair Display', serif; 
+    font-style: italic; 
+    font-size: 1.2rem; 
+    color: #444; 
+}
+
+
+
+
+
+/* DISEÑO ÁLBUM EDITORIAL */
+.album-editorial-section { padding: 80px 20px; background: #f9f9f9; }
+.album-layout { 
+    display: grid; grid-template-columns: 1fr 1fr; max-width: 1000px; 
+    margin: 0 auto; align-items: center; border: 1px solid #eee; background: #fff;
+}
+.album-text { padding: 60px; text-align: left; }
+.album-title { font-family: 'Bodoni Moda', serif; font-size: 2.5rem; margin-bottom: 20px; }
+.album-desc { font-size: 0.9rem; line-height: 1.8; color: #666; margin-bottom: 30px; }
+.btn-noir-minimal { 
+    padding: 15px 30px; border: 1px solid #000; text-decoration: none; 
+    color: #000; font-size: 0.7rem; letter-spacing: 3px; font-weight: 600; transition: 0.3s;
+}
+.btn-noir-minimal:hover { background: #000; color: #fff; }
+
+.album-visual { background: #000; padding: 60px; display: flex; justify-content: center; }
+.qr-placeholder { border: 1px solid rgba(255,255,255,0.2); padding: 20px; text-align: center; color: #fff; }
+.qr-img { width: 150px; height: 150px; filter: invert(1); margin-bottom: 15px; } /* Invertimos para que se vea blanco en fondo negro */
+.qr-placeholder span { font-size: 0.6rem; letter-spacing: 2px; opacity: 0.7; display: block; }
+
+/* Ajuste móvil */
+@media (max-width: 768px) {
+    .album-layout { grid-template-columns: 1fr; }
+    .parents-container { flex-direction: column; }
+}
+
+
+
+
+/* --- ESTILO ITINERARIO --- */
+.itinerary-vogue {
+    padding: 80px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.script-title {
+    font-family: 'Playfair Display', serif; /* O la fuente cursiva que estés usando */
+    font-style: italic;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.vertical-line-short {
+    width: 1px;
+    height: 40px;
+    background: #000;
+    margin: 0 auto 40px;
+    opacity: 0.2;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Línea vertical decorativa detrás de los eventos */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #eee;
+    z-index: 0;
+}
+
+.timeline-item {
+    position: relative;
+    z-index: 1;
+    background: #fff; /* Para tapar la línea de fondo justo tras el texto */
+    padding: 10px 0;
+}
+
+.time {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.event-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    color: #000;
+}
+
+
+/* El resto del CSS que ya teníamos... */
+.footer-signature {
+    padding: 30px 20px;
+    text-align: center;
+    background: var(--white-bg); /* O el color de fondo que prefieras */
+    opacity: 0.6; /* Lo hace más sutil */
+}
+
+.footer-signature p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem; /* Tamaño chiquito */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark-text);
+    margin: 0;
+}
+
+.dress-code-content {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid var(--green-light); /* Una línea divisoria fina */
+    margin-top: 10px;
+}
+
+.btn-inspo:hover {
+    background: var(--brown-earth);
+    color: white;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
